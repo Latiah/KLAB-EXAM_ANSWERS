@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<script type="text/javascript">
+    const item = [{name:"Bike",price:100},{name:"TV",price: 200}, {name:"Album",price:10}, {name:"Book",price:5},{name:"Phone" ,price:500}, {name:"Computer",price:1000}];
+let sum=0;
+let cheap=item[0].price;
+let expensive=item[0].price;
+let sum2=0;
+    for(let i=0;i<item.length;i++){
+      if(item[i].price<cheap){
+        cheap=item[i].price;
+        cheap_product=item[i].name;
+      }
+      if(item[i].price>expensive){
+        expensive=item[i].price;
+        expensive_product=item[i].name;
+      }
+      if(item[i].price>10){
+        sum2=sum2+item[i].price;
+      }
+      sum=sum+item[i].price;
+    }
+    document.write("1.Cheap product is "+cheap_product+"  and it costs "+cheap+"dollars"+"<br>");
+    document.write("2.The expensive product is "+expensive_product+"  and it costs "+expensive+"dollars"+"<br>");
+    document.write("3.Full price of all products combined="+sum+" dollars"+"<br>");
+    document.write("4.Full price of products  excluding those under 10 dolars = "+sum2+" dollars"+"<br>");
+</script>
+</html>
